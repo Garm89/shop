@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+    <!-- Заголовок изображения -->
+    <div class="sw3-display-container sw3-container">
+        <img src="/static/sw3images/main/main.jpg" alt="Jeans" style="width:100%">
+        <div class="sw3-display-bottomleft sw3-text-black" style="padding:24px 48px">
+          <h1 class="sw3-jumbo sw3-hide-small">Новое поступление</h1>
+          <h1 class="sw3-hide-large sw3-hide-medium">Новое поступление</h1>
+          <h1 class="sw3-hide-small">КОЛЛЕКЦИЯ 2024</h1>
+          <!--<p><a href="#jeans" class="sw3-button sw3-black sw3-padding-large sw3-large">МАГАЗИН ЗАКАЗ</a></p> -->
+        </div>
+      </div>
+  
+  <br>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+elit. Culpa, fugiat obcaecati? Dignissimos earum facilis incidunt
+modi, molestias mollitia nam quis recusandae voluptatum?</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+                <p> Dicta id officia quibusdam vel voluptates. Ad
+adipisci aliquid animi architecto commodi deleniti dolor
+doloremque facilis fugiat hic illo nam odit officia placeat
+provident quam quisquam quo reiciendis repudiandae sint suscipit
+unde, velit voluptatem! </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+                    <p>Ab accusamus delectus et expedita id iste,
+laboriosam optio quam, recusandae sed veritatis voluptate!
+Accusamus blanditiis debitis et tempora. Ab architecto asperiores
+aut consequuntur distinctio earum iusto nihil, non odit quidem
+soluta veniam.</p>
+        </div>
+    </div>
+{% endblock %}

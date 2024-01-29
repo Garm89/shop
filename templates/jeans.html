@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+    <!-- Заголовок изображения -->
+    <div class="sw3-display-container sw3-container">
+      <img src="/static/sw3images/jeans/jeans.jpg" alt="Jeans" style="width:100%">
+      <div class="sw3-display-topleft sw3-text-white" style="padding:24px 48px">
+        <h1 class="sw3-jumbo sw3-hide-small">Новое поступление</h1>
+        <h1 class="sw3-hide-large sw3-hide-medium">Новое поступление</h1>
+        <h1 class="sw3-hide-small">КОЛЛЕКЦИЯ 2024</h1>
+        <!--<p><a href="#jeans" class="sw3-button sw3-black sw3-padding-large sw3-large">МАГАЗИН ЗАКАЗ</a></p> -->
+      </div>
+    </div>
+
+<br>
+
+<div class="sw3-row sw3-grayscale">
+    <div class="sw3-col l3 s6">
+      <div class="sw3-container">
+        <img src="/static/sw3images/jeans/jeans1.jpg" style="width:100%">
+        <p>Рваные Узкие Джинсы<br><b>$24.99</b></p>
+      </div>
+      <div class="sw3-container">
+        <img src="/static/sw3images/jeans/jeans2.jpg" style="width:100%">
+        <p>Мега Рваные Джинсы<br><b>$19.99</b></p>
+      </div>
+    </div>
+
+    <div class="sw3-col l3 s6">
+      <div class="sw3-container">
+        <div class="sw3-display-container">
+          <img src="/static/sw3images/jeans/jeans2.jpg" style="width:100%">
+          <span class="sw3-tag sw3-display-topleft">Новинка</span>
+          <div class="sw3-display-middle sw3-display-hover">
+            <button class="sw3-button sw3-black">Купить сейчас <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Мега Рваные Джинсы<br><b>$19.99</b></p>
+      </div>
+      <div class="sw3-container">
+        <img src="/static/sw3images/jeans/jeans3.jpg" style="width:100%">
+        <p>Обтягивающие Узкие Джинсы<br><b>$20.50</b></p>
+      </div>
+    </div>
+
+    <div class="sw3-col l3 s6">
+      <div class="sw3-container">
+        <img src="/static/sw3images/jeans/jeans3.jpg" style="width:100%">
+        <p>Узкие Джинсы<br><b>$20.50</b></p>
+      </div>
+      <div class="sw3-container">
+        <div class="sw3-display-container">
+          <img src="/static/sw3images/jeans/jeans4.jpg" style="width:100%">
+          <span class="sw3-tag sw3-display-topleft">Распродажа</span>
+          <div class="sw3-display-middle sw3-display-hover">
+            <button class="sw3-button sw3-black">Купить сейчас <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Старинные Джинсы<br><b class="sw3-text-red">$14.99</b></p>
+      </div>
+    </div>
+
+    <div class="sw3-col l3 s6">
+      <div class="sw3-container">
+        <img src="/static/sw3images/jeans/jeans4.jpg" style="width:100%">
+        <p>Старинные Джинсы<br><b>$14.99</b></p>
+      </div>
+      <div class="sw3-container">
+        <img src="/static/sw3images/jeans/jeans1.jpg" style="width:100%">
+        <p>Рваные Узкие Джинсы<br><b>$24.99</b></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

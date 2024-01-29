@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>{% block title %}
+            {{ title }}
+            {% endblock %}</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.schoolsw3.com/sw3css/4/sw3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .sw3-sidebar a {font-family: "Roboto", sans-serif}
+  body,h1,h2,h3,h4,h5,h6,.sw3-wide {font-family: "Montserrat", sans-serif;}
+  </style>
+ </head>
+ <body class="sw3-content" style="max-width:1200px">
+
+  <!-- Боковая панель / меню -->
+  <nav class="sw3-sidebar sw3-bar-block sw3-white sw3-collapse sw3-top" style="z-index:3;width:250px" id="mySidebar">
+    <div class="sw3-container sw3-display-container sw3-padding-16">
+      <i onclick="sw3_close()" class="fa fa-remove sw3-hide-large sw3-button sw3-display-topright"></i>
+      <h3 class="sw3-wide"><b><a href="/main/">ЛОГО</a></b></h3>
+    </div>
+    <div class="sw3-padding-64 sw3-large sw3-text-grey" style="font-weight:bold">
+      <a href="/shorts/" class="sw3-bar-item sw3-button">Рубашки</a>
+      <a href="/dress/" class="sw3-bar-item sw3-button">Платья</a>
+      <a href="/jeans/" class="sw3-bar-item sw3-button">Джинсы</a>
+      <a href="/jacket/" class="sw3-bar-item sw3-button">Куртки</a>
+      <a href="/costume/" class="sw3-bar-item sw3-button">Костюм</a>
+      <a href="/blazers/" class="sw3-bar-item sw3-button">Блейзеры</a>
+      <a href="/sneakers/" class="sw3-bar-item sw3-button">Кроссовки</a>
+    </div>
+    <a href="#footer" class="sw3-bar-item sw3-button sw3-padding">Контакты</a> 
+    <a href="javascript:void(0)" class="sw3-bar-item sw3-button sw3-padding" onclick="document.getElementById('newsletter').style.display='block'">Рассылка</a> 
+    <a href="#footer"  class="sw3-bar-item sw3-button sw3-padding">Подписаться</a>
+  </nav>
+
+  <!-- Верхнее меню на маленьких экранах -->
+  <header class="sw3-bar sw3-top sw3-hide-large sw3-black sw3-xlarge">
+    <div class="sw3-bar-item sw3-padding-24 sw3-wide"><a href="/main/">LOGO</a></div>
+    <a href="javascript:void(0)" class="sw3-bar-item sw3-button sw3-padding-24 sw3-right" onclick="sw3_open()"><i class="fa fa-bars"></i></a>
+  </header>
+
+  <!-- Эффект наложения при открытии боковой панели на маленьких экранах -->
+  <div class="sw3-overlay sw3-hide-large" onclick="sw3_close()" style="cursor:pointer" title="закрыть боковое меню" id="myOverlay"></div>
+
+  <!-- !СТРАНИЦЫ СДЕРЖАНИЯ! -->
+  <div class="sw3-main" style="margin-left:250px">
+
+    <!-- Нажмите вниз содержание на малых экранах -->
+    <div class="sw3-hide-large" style="margin-top:83px"></div>
+    
+    <!-- Верхний заголовок -->
+    <header class="sw3-container sw3-xlarge">
+      <p class="sw3-left">
+        {{ title }}</p>
+      <p class="sw3-right">
+        <i class="fa fa-shopping-cart sw3-margin-right"></i>
+        <i class="fa fa-search"></i>
+      </p>
+    </header>
+
+
+
+    {% block content %}
+
+    {% endblock %}
+   
+    <!-- Footer -->
+    <footer class="sw3-padding-64 sw3-light-grey sw3-small sw3-center" id="footer">
+      <div class="sw3-row-padding">
+        <div class="sw3-col s4">
+          <h4>Контакты</h4>
+          <p>Вопросы? Идти вперед.</p>
+          <form action="/action_page.php" target="_blank">
+            <p><input class="sw3-input sw3-border" type="text" placeholder="Имя" name="Name" required></p>
+            <p><input class="sw3-input sw3-border" type="text" placeholder="Почта" name="Email" required></p>
+            <p><input class="sw3-input sw3-border" type="text" placeholder="Вопрос" name="Subject" required></p>
+            <p><input class="sw3-input sw3-border" type="text" placeholder="Сообщение" name="Message" required></p>
+            <button type="submit" class="sw3-button sw3-block sw3-black">Отправить</button>
+          </form>
+        </div>
+
+        <div class="sw3-col s4">
+          <h4>О Нас</h4>
+          <p><a href="#">О нас</a></p>
+          <p><a href="#">Мы нанимаем</a></p>
+          <p><a href="#">Поддержка</a></p>
+          <p><a href="#">Найти магазин</a></p>
+          <p><a href="#">Отгрузка</a></p>
+          <p><a href="#">Платеж</a></p>
+          <p><a href="#">Подарочная карта</a></p>
+          <p><a href="#">Возврат</a></p>
+          <p><a href="#">Помощь</a></p>
+        </div>
+
+        <div class="sw3-col s4 sw3-justify">
+          <h4>Склад</h4>
+          <p><i class="fa fa-fw fa-map-marker"></i> Название Компании</p>
+          <p><i class="fa fa-fw fa-phone"></i> +7(000)000-00-00</p>
+          <p><i class="fa fa-fw fa-envelope"></i> example@mail.ru</p>
+          <h4>Мы принимаем</h4>
+          <p><i class="fa fa-fw fa-cc-amex"></i> Карты AMEX</p>
+          <p><i class="fa fa-fw fa-credit-card"></i> Кредитная Карта</p>
+          <br>
+          <i class="fa fa-facebook-official sw3-hover-opacity sw3-large"></i>
+          <i class="fa fa-instagram sw3-hover-opacity sw3-large"></i>
+          <i class="fa fa-snapchat sw3-hover-opacity sw3-large"></i>
+          <i class="fa fa-pinterest-p sw3-hover-opacity sw3-large"></i>
+          <i class="fa fa-twitter sw3-hover-opacity sw3-large"></i>
+          <i class="fa fa-linkedin sw3-hover-opacity sw3-large"></i>
+        </div>
+      </div>
+    </footer>
+
+    <div class="sw3-black sw3-center sw3-padding-24">
+    </div>
+
+    <!-- Конец страницы содержания -->
+  </div>
+
+  <!-- Информационный Бюллетень Moдель -->
+  <div id="newsletter" class="sw3-modal">
+    <div class="sw3-modal-content sw3-animate-zoom" style="padding:32px">
+      <div class="sw3-container sw3-white sw3-center">
+        <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove sw3-right sw3-button sw3-transparent sw3-xxlarge"></i>
+        <h2 class="sw3-wide">ИНФОРМАЦИОННЫЙ БЮЛЛЕТЕНЬ</h2>
+        <p>Присоединяйтесь к нашему списку рассылки, чтобы получать новости о новых поступлениях и специальных предложениях.</p>
+        <p><input class="sw3-input sw3-border" type="text" placeholder="Ввод e-mail"></p>
+        <button type="button" class="sw3-button sw3-padding-large sw3-red sw3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Подписаться</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Аккордеон 
+  function myAccFunc() {
+      var x = document.getElementById("demoAcc");
+      if (x.className.indexOf("sw3-show") == -1) {
+          x.className += " sw3-show";
+      } else {
+          x.className = x.className.replace(" sw3-show", "");
+      }
+  }
+
+  // Нажмите на ссылку "Jeans" на странице загрузки, чтобы открыть аккордеон для демонстрационных целей
+  document.getElementById("myBtn").click();
+
+
+  // Скрипт для открытия и закрытия боковой панели
+  function sw3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
+   
+  function sw3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+
+ </body>
+</html>
